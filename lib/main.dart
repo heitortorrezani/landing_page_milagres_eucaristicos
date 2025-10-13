@@ -1,1 +1,16 @@
-import 'package:flutter/material.dart';import 'package:landing_page_cardiologista/Pages/lading_page.dart';void main() {  runApp(const MyWebSite());}class MyWebSite extends StatelessWidget {  const MyWebSite({super.key});  @override  Widget build(BuildContext context) {    return MaterialApp(      debugShowCheckedModeBanner: false,      title: 'Landing Page Cardiologista',      home: LandingPage()    );  }}
+import 'package:flutter/material.dart';
+import 'package:landing_page_cardiologista/lading_page.dart';
+void main() {
+  runApp(const MyWebSite());
+}
+class MyWebSite extends StatelessWidget {
+  const MyWebSite({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Landing Page Cardiologista',
+      home: LandingPage()
+    );
+  }
+}
