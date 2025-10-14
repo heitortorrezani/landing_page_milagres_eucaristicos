@@ -37,33 +37,12 @@ class _SectionHeroState extends State<SectionHero> {
               ),
             ),
           ),
-          Positioned(
-            right: size.width * 0.05,
-            bottom: 30,
-            child: Container(
-              width: size.width * 0.3,
-              constraints: const BoxConstraints(maxWidth: 280, minWidth: 150),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    blurRadius: 12,
-                    offset: Offset(0, 6),
-                  ),
-                ],
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset('assets/capa_livro.jpg', fit: BoxFit.cover),
-              ),
-            ),
-          ),
+
           Positioned(
             left: size.width * 0.05,
             top: 80,
             child: SizedBox(
-              width: size.width * 0.5,
+              width: size.width * 0.6,
               child: Column(
                 children: [
                   const Text(
@@ -83,9 +62,65 @@ class _SectionHeroState extends State<SectionHero> {
                     'Um cardiologista italiano investiga com rigor científico os milagres da Eucaristia, revelando evidências extraordinárias que unem fé e ciência.',
                     style: TextStyle(color: Colors.white),
                   ),
-                  SizedBox(height: 50),
-                  Button(label: 'Comprar'),
                 ],
+              ),
+            ),
+          ),
+          if(size.width > 400)
+          Positioned(
+            left: 20,
+            bottom: 20,
+            child: Button(label: 'Comprar', width: 200,),
+          ),
+          if(size.width < 400)
+          Positioned(
+            right: 5,
+            bottom: 20,
+            child: Button(label: 'Comprar', width: 170,),
+          ),
+          if(size.width > 400)
+          Positioned(
+            right: size.width * 0.05,
+            bottom: 20,
+            child: Container(
+              width: size.width * 0.3,
+              constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    blurRadius: 12,
+                    offset: Offset(0, 6),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset('assets/capa_livro.jpg', fit: BoxFit.cover),
+              ),
+            ),
+          ),
+          if(size.width < 400)
+          Positioned(
+            right: size.width * 0.05,
+            top: 250,
+            child: Container(
+              width: size.width * 0.3,
+              constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    blurRadius: 12,
+                    offset: Offset(0, 6),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset('assets/capa_livro.jpg', fit: BoxFit.cover),
               ),
             ),
           ),
