@@ -23,11 +23,10 @@ class _LandingPageState extends State<LandingPage> {
         child: Column(
           children: [
             SectionHero(),
-            if(size.width < 800) SectionBookCell(),
-            if(size.width >= 800) SectionBookComputador(),
-            
-          ]
-        )
+            if (size.width < 800) SectionBookCell(),
+            if (size.width >= 800) SectionBookComputador(),
+          ],
+        ),
       ),
     );
   }

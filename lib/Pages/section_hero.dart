@@ -62,16 +62,18 @@ class _SectionHeroState extends State<SectionHero> {
                     'Um cardiologista italiano investiga com rigor científico os milagres da Eucaristia, revelando evidências extraordinárias que unem fé e ciência.',
                     style: TextStyle(color: Colors.white),
                   ),
+                  SizedBox(height: 20),
+                  if(size.width > 400)
+                    Positioned(
+                      left: 20,
+                      bottom: 20,
+                      child: Button(label: 'Comprar', width: 200,),
+                    ),
                 ],
               ),
             ),
           ),
-          if(size.width > 400)
-          Positioned(
-            left: 20,
-            bottom: 20,
-            child: Button(label: 'Comprar', width: 200,),
-          ),
+          
           if(size.width < 400)
           Positioned(
             right: 5,
