@@ -51,7 +51,15 @@ class _SectionHeroState extends State<SectionHero> {
                   ),
                   const Text(
                     'VISITA JESUS',
-                    style: TextStyle(fontSize: 50, color: Colors.yellow),
+                    style: TextStyle(
+                      fontSize: 50, color: Colors.yellow,
+                      shadows: [
+                        BoxShadow(
+                          blurRadius: 20,
+                          color: Colors.yellow
+                        )
+                      ]
+                      ),
                   ),
                   SizedBox(height: 70),
                   Text(

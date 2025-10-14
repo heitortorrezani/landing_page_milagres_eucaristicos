@@ -56,7 +56,13 @@ class _SectionAuthorState extends State<SectionAuthor> {
                   'Dr. Franco Serafini',
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.yellow[800]
+                    color: Colors.yellow,
+                    shadows: [
+                      BoxShadow(
+                        blurRadius: 20,
+                        color: Colors.yellow
+                      )
+                    ]
                   ),
                   ),
               ],
