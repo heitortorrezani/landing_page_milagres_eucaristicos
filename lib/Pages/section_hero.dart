@@ -24,7 +24,7 @@ class _SectionHeroState extends State<SectionHero> {
               height: size.height * 0.85,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/hero-bg.jpg'),
+                  image: AssetImage('assets/milagre_de_lanciano.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
