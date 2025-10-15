@@ -17,6 +17,11 @@ class _SectionHeroState extends State<SectionHero> {
       height: size.height * 0.85,
       child: Stack(
         children: [
+          Container(
+            width: size.width,
+            height: size.height * 0.85,
+            color: Colors.black,
+          ),
           Opacity(
             opacity: 0.5,
             child: Container(

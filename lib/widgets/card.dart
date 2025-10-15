@@ -32,7 +32,7 @@ class InfoCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          //Icon(icon, color: Colors.amber, size: 28),
+          Icon(icon, color: Colors.amber, size: 28),
           const SizedBox(height: 10),
           Text(
             title,
