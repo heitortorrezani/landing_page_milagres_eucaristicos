@@ -80,7 +80,7 @@ class _SectionHeroState extends State<SectionHero> {
                     Positioned(
                       left: 20,
                       bottom: 20,
-                      child: Button(label: 'Comprar', width: 200,),
+                      child: Button(label: 'Comprar'),
                     ),
                 ],
               ),

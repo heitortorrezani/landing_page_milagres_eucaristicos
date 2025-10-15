@@ -2,19 +2,23 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   final String label;
-  final double width;
-  const Button({
+  double? width;
+  Button({
     super.key,
     required this.label,
-    required this.width
+    this.width
   });
   
   @override
   Widget build(BuildContext context) {
-    
+    if(width == null){
+      width = 200;
+    }
     return InkWell(
       mouseCursor: SystemMouseCursors.click,
-      onTap: () {},
+      onTap: () {
+        
+      },
     
       child: Container(
         width: width,

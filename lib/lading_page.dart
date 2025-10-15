@@ -3,6 +3,7 @@ import 'package:landing_page_cardiologista/Pages/autor/section_author_cell.dart'
 import 'package:landing_page_cardiologista/Pages/autor/section_author_computador.dart';
 import 'package:landing_page_cardiologista/Pages/book/section_book_cell.dart';
 import 'package:landing_page_cardiologista/Pages/book/section_book_computador.dart';
+import 'package:landing_page_cardiologista/Pages/final/section_final.dart';
 import 'package:landing_page_cardiologista/Pages/hero/section_hero.dart';
 
 class LandingPage extends StatefulWidget {
@@ -18,7 +19,6 @@ class _LandingPageState extends State<LandingPage> {
     final size = MediaQuery.sizeOf(context);
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(19, 32, 57, 100),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -27,6 +27,7 @@ class _LandingPageState extends State<LandingPage> {
             if (size.width >= 800) SectionBookComputador(),
             if (size.width < 800) SectionAuthorCell(),
             if (size.width >= 800) SectionAuthorComputador(),
+            SectionFinal(),
           ],
         ),
       ),
