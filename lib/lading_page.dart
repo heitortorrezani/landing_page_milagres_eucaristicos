@@ -4,6 +4,7 @@ import 'package:landing_page_cardiologista/Pages/autor/section_author_computador
 import 'package:landing_page_cardiologista/Pages/book/section_book_cell.dart';
 import 'package:landing_page_cardiologista/Pages/book/section_book_computador.dart';
 import 'package:landing_page_cardiologista/Pages/final/section_final.dart';
+import 'package:landing_page_cardiologista/Pages/footer/section_footer.dart';
 import 'package:landing_page_cardiologista/Pages/hero/section_hero.dart';
 
 class LandingPage extends StatefulWidget {
@@ -28,6 +29,7 @@ class _LandingPageState extends State<LandingPage> {
             if (size.width < 800) SectionAuthorCell(),
             if (size.width >= 800) SectionAuthorComputador(),
             SectionFinal(),
+            SectionFooter()
           ],
         ),
       ),
