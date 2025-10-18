@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class Button extends StatelessWidget {
   final String label;
   double? width;
+  final Function() onTap;
   Button({
     super.key,
     required this.label,
-    this.width
+    this.width,
+    required this.onTap
   });
   
   @override
@@ -16,10 +18,7 @@ class Button extends StatelessWidget {
     }
     return InkWell(
       mouseCursor: SystemMouseCursors.click,
-      onTap: () {
-        
-      },
-    
+      onTap: onTap,
       child: Container(
         width: width,
         height: 50,

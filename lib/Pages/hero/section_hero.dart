@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_cardiologista/Pages/final/final_controller.dart';
 import 'package:landing_page_cardiologista/widgets/button.dart';
 
 class SectionHero extends StatefulWidget {
@@ -57,14 +58,12 @@ class _SectionHeroState extends State<SectionHero> {
                   const Text(
                     'VISITA JESUS',
                     style: TextStyle(
-                      fontSize: 50, color: Colors.yellow,
+                      fontSize: 50,
+                      color: Colors.yellow,
                       shadows: [
-                        BoxShadow(
-                          blurRadius: 20,
-                          color: Colors.yellow
-                        )
-                      ]
-                      ),
+                        BoxShadow(blurRadius: 20, color: Colors.yellow),
+                      ],
+                    ),
                   ),
                   SizedBox(height: 70),
                   Text(
@@ -76,69 +75,86 @@ class _SectionHeroState extends State<SectionHero> {
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(height: 20),
-                  if(size.width > 400)
+                  if (size.width > 400)
                     Positioned(
                       left: 20,
                       bottom: 20,
-                      child: Button(label: 'Comprar'),
+                      child: Button(
+                        label: 'Comprar',
+                        onTap: () => OpenUrl(
+                          'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus',
+                        ),
+                      ),
                     ),
                 ],
               ),
             ),
           ),
-          
-          if(size.width < 400)
-          Positioned(
-            right: 5,
-            bottom: 20,
-            child: Button(label: 'Comprar', width: 170,),
-          ),
-          if(size.width > 400)
-          Positioned(
-            right: size.width * 0.05,
-            bottom: 20,
-            child: Container(
-              width: size.width * 0.3,
-              constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    blurRadius: 12,
-                    offset: Offset(0, 6),
-                  ),
-                ],
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset('assets/capa_livro.jpg', fit: BoxFit.cover),
+
+          if (size.width < 400)
+            Positioned(
+              right: 5,
+              bottom: 20,
+              child: Button(
+                label: 'Comprar',
+                width: 170,
+                onTap: () => OpenUrl(
+                  'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus',
+                ),
               ),
             ),
-          ),
-          if(size.width < 400)
-          Positioned(
-            right: size.width * 0.05,
-            top: 250,
-            child: Container(
-              width: size.width * 0.3,
-              constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    blurRadius: 12,
-                    offset: Offset(0, 6),
+          if (size.width > 400)
+            Positioned(
+              right: size.width * 0.05,
+              bottom: 20,
+              child: Container(
+                width: size.width * 0.3,
+                constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 12,
+                      offset: Offset(0, 6),
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'assets/capa_livro.jpg',
+                    fit: BoxFit.cover,
                   ),
-                ],
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset('assets/capa_livro.jpg', fit: BoxFit.cover),
+                ),
               ),
             ),
-          ),
+          if (size.width < 400)
+            Positioned(
+              right: size.width * 0.05,
+              top: 250,
+              child: Container(
+                width: size.width * 0.3,
+                constraints: const BoxConstraints(maxWidth: 280, minWidth: 100),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 12,
+                      offset: Offset(0, 6),
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(
+                    'assets/capa_livro.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
         ],
       ),
     );

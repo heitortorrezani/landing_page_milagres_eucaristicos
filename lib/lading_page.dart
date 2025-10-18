@@ -20,6 +20,7 @@ class _LandingPageState extends State<LandingPage> {
     final size = MediaQuery.sizeOf(context);
 
     return Scaffold(
+      backgroundColor: Color(0xFF0D1B2A),
       body: SingleChildScrollView(
         child: Column(
           children: [

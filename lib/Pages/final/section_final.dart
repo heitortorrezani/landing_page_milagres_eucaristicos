@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page_cardiologista/Pages/final/final_controller.dart';
 import 'package:landing_page_cardiologista/widgets/button.dart';
 import 'package:landing_page_cardiologista/widgets/card_compra.dart';
 
@@ -69,11 +70,17 @@ class _SectionFinalState extends State<SectionFinal> {
           ),
           SizedBox(height: 10),
           Text(
-            'Descubra como os milagres eucarísticos resistem ao escrutínio da medicina moderna e fortaleça sua fé através da ciência.',
+            'Descubra como os Milagres Eucarísticos resistem ao escrutínio da medicina moderna e fortaleça sua fé através da ciência.',
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
           SizedBox(height: 50),
-          Button(label: 'Adquirir'),
+          Button(
+            label: 'Adquirir',
+            onTap: () =>
+              OpenUrl(
+                'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus'
+              )
+            ),
           SizedBox(height: 20),
           size.width >= 800
               ? Row(
