@@ -35,11 +35,11 @@ class _SectionHeroState extends State<SectionHero> {
                 ),
               ),
               foregroundDecoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.center,
-                  end: Alignment.bottomCenter,
-                  colors: [Colors.transparent, Colors.black.withOpacity(0.6)],
-                ),
+                // gradient: LinearGradient(
+                //   begin: Alignment.center,
+                //   end: Alignment.bottomCenter,
+                //   colors: [Colors.transparent, Colors.black.withOpacity(0.6)],
+                // ),
               ),
             ),
           ),
