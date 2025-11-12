@@ -77,8 +77,8 @@ class _SectionHeroState extends State<SectionHero> {
                   SizedBox(height: 20),
                   if (size.width > 400)
                     SizedBox(
-                      height: 50,
-                      width: 200,
+                      height: 70,
+                      width: 300,
                       child: Stack(
                         children: [
                           Positioned(

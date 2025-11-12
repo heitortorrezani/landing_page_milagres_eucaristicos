@@ -73315,7 +73315,7 @@ A.xG.prototype={
 ag(){return new A.Pa()}}
 A.Pa.prototype={
 O(a){var s=null,r="assets/capa_livro.jpg",q=A.bB(a,B.cf,t.w).w.a,p=q.a,o=q.b*0.85,n=A.ca(s,B.o,B.l,s,s,s,o,s,s,p),m=A.aj3(A.ca(s,B.o,s,s,new A.cn(s,new A.pn(new A.oS("assets/milagre_de_lanciano.jpg",s,s),B.hL),s,s,s,s,B.a5),new A.cn(s,s,s,s,s,s,B.a5),o,s,s,p),0.5),l=p*0.05,k=t.p,j=A.c([B.QW,B.QQ,A.c6(s,70,s),A.ce("Os milagres eucar\xedsticos \xe0 prova da ci\xeancia",s,s,s,s,A.ct(s,s,B.k,s,s,s,s,s,s,s,s,30,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),A.ce("Um cardiologista italiano investiga com rigor cient\xedfico os milagres da Eucaristia, revelando evid\xeancias extraordin\xe1rias que unem f\xe9 e ci\xeancia.",s,s,s,s,A.ct(s,s,B.k,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),A.c6(s,20,s)],k),i=p>400
-if(i)j.push(A.c6(A.o2(B.cL,A.c([A.qf(20,new A.mj("Comprar",s,new A.aex(),s),s,s,20,s,s,s)],k),B.a6,B.cD),50,200))
+if(i)j.push(A.c6(A.o2(B.cL,A.c([A.qf(20,new A.mj("Comprar",s,new A.aex(),s),s,s,20,s,s,s)],k),B.a6,B.cD),70,300))
 n=A.c([n,m,A.qf(s,A.c6(A.d0(j,B.K,B.M,B.W,0),s,p*0.6),s,s,l,s,80,s)],k)
 m=p<400
 if(m)n.push(A.qf(20,new A.mj("Comprar",170,new A.aey(),s),s,s,s,5,s,s))
