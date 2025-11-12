@@ -76,14 +76,22 @@ class _SectionHeroState extends State<SectionHero> {
                   ),
                   SizedBox(height: 20),
                   if (size.width > 400)
-                    Positioned(
-                      left: 20,
-                      bottom: 20,
-                      child: Button(
-                        label: 'Comprar',
-                        onTap: () => OpenUrl(
-                          'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus',
-                        ),
+                    SizedBox(
+                      height: 50,
+                      width: 200,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                          left: 20,
+                          bottom: 20,
+                          child: Button(
+                            label: 'Comprar',
+                            onTap: () => OpenUrl(
+                              'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus',
+                            ),
+                          ),
+                                            ),
+                        ],
                       ),
                     ),
                 ],
