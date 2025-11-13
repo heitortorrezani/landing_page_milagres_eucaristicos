@@ -31,73 +31,76 @@ class _SectionFinalState extends State<SectionFinal> {
         description: 'Receba em poucos dias',
       ),
     ];
-    return Container(
-      width: size.width,
-      decoration: BoxDecoration(
-        color: Color(0xFF0D1B2A),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Container(
+        width: size.width,
+        decoration: BoxDecoration(
+          color: Color(0xFF0D1B2A),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(height: 20),
-
-          Text(
-            'Adquira Seu Exemplar',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size.width < 600 ? 32 : 50,
-              fontWeight: FontWeight.bold,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 20),
+      
+            Text(
+              'Adquira Seu Exemplar',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: size.width < 600 ? 32 : 50,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-
-          SizedBox(height: 10),
-          Text(
-            'Uma jornada única entre fé e ciência',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size.width < 600
-                  ? 32
-                  : 50, // ajusta tamanho em telas pequenas
-              fontWeight: FontWeight.bold,
+      
+            SizedBox(height: 10),
+            Text(
+              'Uma jornada única entre fé e ciência',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: size.width < 600
+                    ? 32
+                    : 50, // ajusta tamanho em telas pequenas
+                fontWeight: FontWeight.bold,
+              ),
+              softWrap: true,
+              overflow: TextOverflow.visible,
             ),
-            softWrap: true,
-            overflow: TextOverflow.visible,
-          ),
-          SizedBox(height: 10),
-          Text(
-            'Descubra como os Milagres Eucarísticos resistem ao escrutínio da medicina moderna e fortaleça sua fé através da ciência.',
-            style: TextStyle(fontSize: 20, color: Colors.white),
-          ),
-          SizedBox(height: 50),
-          Button(
-            label: 'Adquirir',
-            onTap: () =>
-              OpenUrl(
-                'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus'
-              )
+            SizedBox(height: 10),
+            Text(
+              'Descubra como os Milagres Eucarísticos resistem ao escrutínio da medicina moderna e fortaleça sua fé através da ciência.',
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
-          SizedBox(height: 20),
-          size.width >= 800
-              ? Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: cards,
+            SizedBox(height: 50),
+            Button(
+              label: 'Adquirir',
+              onTap: () =>
+                OpenUrl(
+                  'https://editoracoracoescatolicos.com.br/products/um-cardiologista-visita-jesus'
                 )
-              : Column(
-                  children: cards
-                      .map(
-                        (card) => Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8),
-                          child: card,
-                        ),
-                      )
-                      .toList(),
-                ),
-        ],
+              ),
+            SizedBox(height: 20),
+            size.width >= 800
+                ? Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: cards,
+                  )
+                : Column(
+                    children: cards
+                        .map(
+                          (card) => Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8),
+                            child: card,
+                          ),
+                        )
+                        .toList(),
+                  ),
+          ],
+        ),
       ),
     );
   }

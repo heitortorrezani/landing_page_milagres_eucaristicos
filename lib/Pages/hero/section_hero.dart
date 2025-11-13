@@ -64,13 +64,17 @@ class SectionHero extends StatelessWidget {
                       const SizedBox(height: 40),
                       const Text(
                         'Os milagres eucarísticos à prova da ciência',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: TextStyle(fontSize: 24, color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 10),
                       const Text(
                         'Um cardiologista italiano investiga com rigor científico os milagres da Eucaristia, revelando evidências extraordinárias que unem fé e ciência.',
-                        style: TextStyle(color: Colors.white70, height: 1.5),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          height: 1.5,
+                          fontSize: 16
+                          ),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 30),
