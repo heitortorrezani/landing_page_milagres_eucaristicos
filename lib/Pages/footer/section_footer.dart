@@ -184,7 +184,10 @@ class _SectionFooterState extends State<SectionFooter> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Button(label: 'Cadastrar-se', width: 135, onTap: () {}),
+                    Button(label: 'Cadastrar-se', width: 135, onTap: () {
+                      postEmail();
+
+                    }),
                   ],
                 ),
                 const SizedBox(height: 25),
