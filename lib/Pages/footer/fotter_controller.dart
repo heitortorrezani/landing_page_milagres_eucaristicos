@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dio/dio.dart';
 
@@ -6,6 +7,8 @@ final Dio dio = Dio(
     baseUrl: 'http://3.142.225.193:3000'
   )
 );
+
+TextEditingController email = TextEditingController();
 
 String url = '';
 
@@ -22,7 +25,7 @@ Future<void> postEmail() async {
     final response = await dio.post(
       '/email',
       data: {
-        "email": "heitortorrezani@gmail.com",
+        "email": email,
       },
     );
 

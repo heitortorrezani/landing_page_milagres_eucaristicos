@@ -64,7 +64,7 @@ class _SectionFinalState extends State<SectionFinal> {
                 color: Colors.white,
                 fontSize: size.width < 600
                     ? 32
-                    : 50, // ajusta tamanho em telas pequenas
+                    : 50,
                 fontWeight: FontWeight.bold,
               ),
               softWrap: true,

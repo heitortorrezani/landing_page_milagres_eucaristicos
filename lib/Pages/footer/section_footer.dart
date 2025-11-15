@@ -80,11 +80,12 @@ class _SectionFooterState extends State<SectionFooter> {
                         SizedBox(
                           width: 300,
                           child: TextFormField(
-                            controller: _controller,
+                            controller: email,
                             decoration: InputDecoration(
                               labelText: 'Digite algo',
-                              labelStyle:
-                                  const TextStyle(color: Colors.white70),
+                              labelStyle: const TextStyle(
+                                color: Colors.white70,
+                              ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                               ),
@@ -95,7 +96,9 @@ class _SectionFooterState extends State<SectionFooter> {
                           ),
                         ),
                         const SizedBox(width: 5),
-                        Button(label: 'Send', width: 100, onTap: () {}),
+                        Button(label: 'Cadastrar-se', width: 140, onTap: () {
+                          postEmail();
+                        }),
                       ],
                     ),
                   ],
@@ -123,8 +126,7 @@ class _SectionFooterState extends State<SectionFooter> {
                         RedesSociais(
                           iconn: FontAwesomeIcons.youtube,
                           onTap: () => OpenUrl(
-                            url =
-                                'https://www.youtube.com/@CoracoesCatolicos',
+                            url = 'https://www.youtube.com/@CoracoesCatolicos',
                           ),
                         ),
                       ],
@@ -169,11 +171,10 @@ class _SectionFooterState extends State<SectionFooter> {
                     SizedBox(
                       width: 280,
                       child: TextFormField(
-                        controller: _controller,
+                        controller: email,
                         decoration: InputDecoration(
                           labelText: 'Digite algo',
-                          labelStyle:
-                              const TextStyle(color: Colors.white70),
+                          labelStyle: const TextStyle(color: Colors.white70),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -184,10 +185,13 @@ class _SectionFooterState extends State<SectionFooter> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Button(label: 'Cadastrar-se', width: 135, onTap: () {
-                      postEmail();
-
-                    }),
+                    Button(
+                      label: 'Cadastrar-se',
+                      width: 135,
+                      onTap: () {
+                        postEmail();
+                      },
+                    ),
                   ],
                 ),
                 const SizedBox(height: 25),
@@ -204,16 +208,14 @@ class _SectionFooterState extends State<SectionFooter> {
                     RedesSociais(
                       iconn: FontAwesomeIcons.instagram,
                       onTap: () => OpenUrl(
-                        url =
-                            'https://www.instagram.com/coracoescatolicos/',
+                        url = 'https://www.instagram.com/coracoescatolicos/',
                       ),
                     ),
                     const SizedBox(width: 10),
                     RedesSociais(
                       iconn: FontAwesomeIcons.youtube,
                       onTap: () => OpenUrl(
-                        url =
-                            'https://www.youtube.com/@CoracoesCatolicos',
+                        url = 'https://www.youtube.com/@CoracoesCatolicos',
                       ),
                     ),
                   ],
@@ -227,21 +229,16 @@ class _SectionFooterState extends State<SectionFooter> {
             height: 3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: Colors.white70
+              color: Colors.white70,
             ),
           ),
 
           Text(
             '© 2025 Um Cardiologista Visita Jesus. Todos os direitos reservados.',
-            style: TextStyle(
-              color: Colors.white70
-            ),
-            ),
-
+            style: TextStyle(color: Colors.white70),
+          ),
         ],
       ),
     );
   }
 }
-
-
