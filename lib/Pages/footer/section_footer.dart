@@ -98,6 +98,30 @@ class _SectionFooterState extends State<SectionFooter> {
                         const SizedBox(width: 5),
                         Button(label: 'Cadastrar-se', width: 140, onTap: () {
                           postEmail();
+                          if(verificacao == 200){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("Você foi cadastrado!"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
+                          if(verificacao == 400){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("error, tente novamente"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
+                          if(verificacao == 300){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("erro, digite alguma coisa"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
                         }),
                       ],
                     ),
@@ -190,6 +214,30 @@ class _SectionFooterState extends State<SectionFooter> {
                       width: 135,
                       onTap: () {
                         postEmail();
+                        if(verificacao == 200){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("Você foi cadastrado!"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
+                          if(verificacao == 400){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("error, tente novamente"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
+                          if(verificacao == 300){
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text("erro, digite alguma coisa"),
+                                duration: Duration(seconds: 5),
+                              ),
+                            );
+                          }
                       },
                     ),
                   ],

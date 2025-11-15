@@ -14,6 +14,8 @@ TextEditingController email = TextEditingController();
 
 String url = '';
 
+int verificacao = 0;
+
 Future<void> OpenUrl(url) async {
   final Uri uri = Uri.parse(url);
   if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
@@ -24,18 +26,27 @@ Future<void> OpenUrl(url) async {
 
 Future<void> postEmail() async {
   final String emailDetector = email.text;
+  verificacao = 200;
   try {
-    final response = await dio.post(
+    if(emailDetector != ''){
+      email.clear();
+      final response = await dio.post(
       '/email',
       data: {
         "email": emailDetector,
       },
     );
-
-    print("Resposta da API: ${response.data}");
+    
+    }else {
+      verificacao = 300;
+    }
+    
   } on DioException catch (e) {
-    print("Erro Dio: ${e.response?.data ?? e.message}");
+      print("Erro Dio: ${e.message}");
+      verificacao = 400;
+    
   } catch (e) {
     print("Erro inesperado: $e");
+    verificacao = 400;
   }
 }
