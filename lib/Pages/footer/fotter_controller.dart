@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:dio/dio.dart';
 
+class FotterController {}
+
 final Dio dio = Dio(
   BaseOptions(
     baseUrl: 'http://3.142.225.193:3000'
@@ -21,11 +23,12 @@ Future<void> OpenUrl(url) async {
 
 
 Future<void> postEmail() async {
+  final String emailDetector = email.text;
   try {
     final response = await dio.post(
       '/email',
       data: {
-        "email": email,
+        "email": emailDetector,
       },
     );
 
